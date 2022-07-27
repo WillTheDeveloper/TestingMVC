@@ -56,7 +56,7 @@ namespace TestingMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Body")] Posts post)
+        public async Task<IActionResult> Create([Bind("Id,Title,Body")] Models.Post post)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace TestingMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Body")] Posts post)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Body")] Models.Post post)
         {
             if (id != post.Id)
             {

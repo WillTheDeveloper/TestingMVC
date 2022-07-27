@@ -14,6 +14,6 @@ namespace Post.Data
         {
         }
 
-        public DbSet<TestingMVC.Models.Posts> Post { get; set; } = default!;
+        public DbSet<TestingMVC.Models.Post> Post { get; set; } = default!;
     }
 }
