@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Post.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TestingMVCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TestingMVCContext") ?? throw new InvalidOperationException("Connection string 'TestingMVCContext' not found.")));
 
 builder.Services.AddControllersWithViews();
 
