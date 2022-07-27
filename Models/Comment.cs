@@ -1,9 +1,9 @@
 ﻿namespace TestingMVC.Models
 {
-    public class Comments
+    public class Comment
     {
         public int Id { get; set; } 
-        public string Comment { get; set; }
+        public string Body { get; set; }
 
 
     }
